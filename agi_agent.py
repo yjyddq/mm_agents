@@ -30,7 +30,7 @@ class AGIAgent:
         action_space: str = "pyautogui",
         observation_type: str = "screenshot",
         max_trajectory_length: int = 100,
-        client_password: str = "",
+        client_password: str = "7549@.123",
         provider_name: str = "aws",
         screen_width: int = 1920,
         screen_height: int = 1080,
