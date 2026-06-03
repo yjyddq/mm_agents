@@ -199,7 +199,24 @@ def save_to_tmp_img_file(data_str):
 
     return tmp_img_path
 
+"""
+This module implements an intelligent desktop agent powered by an OpenAI computer-use model.
 
+The agent interacts with a desktop environment by receiving observations (primarily screenshots)
+and task instructions, then generating and executing corresponding actions. Model outputs are
+parsed to extract structured computer-use actions, which are subsequently translated into
+executable PyAutoGUI code (e.g., mouse clicks, keyboard input, scrolling, dragging).
+
+Key functionalities include:
+- Maintaining a multi-turn interaction history between the model and the environment.
+- Converting model-generated actions into PyAutoGUI commands for real execution.
+- Supporting multiple observation types (e.g., screenshot, accessibility tree, or both).
+- Executing actions step-by-step and feeding updated screenshots back to the model.
+- Handling API errors with retry mechanisms and dynamic screenshot updates.
+- Providing validation and error handling to ensure robust execution.
+
+This agent serves as a bridge between high-level model reasoning and low-level GUI automation.
+"""
 class OpenAICUAAgent:
     def __init__(
             self,

@@ -114,7 +114,7 @@ def _sanitize_for_log(value: Any) -> Any:
         return [_sanitize_for_log(item) for item in value]
     return value
 
-
+# This is an intelligent agent powered by the GPT-5.4 model, specifically designed to perform operations in desktop environments through the PyAutoGUI library. The agent receives observations from the environment (typically screenshots) and instructions, then generates corresponding PyAutoGUI code to execute the required actions. Additionally, the agent processes model responses, extracts computer calls, and converts them into executable PyAutoGUI code. Furthermore, the agent features an error handling mechanism to ensure proper logging and response when issues arise during execution.
 class GPT54Agent:
     def __init__(
         self,
