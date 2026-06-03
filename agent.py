@@ -625,7 +625,7 @@ class PromptAgent:
             api_url = f"{base_url}/chat/completions" if base_url.endswith('/v1') else f"{base_url}/v1/chat/completions"
             headers = {
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {"sk-ant-9rfiwe-q3wef9fiwe-kfj39f8wefnlKJ29fjwfiw"}"
+                "Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}"
             }
             logger.info("Generating content with GPT model: %s", self.model)
             response = requests.post(
